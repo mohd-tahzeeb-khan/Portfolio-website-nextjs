@@ -27,8 +27,6 @@ const About = () => {
         transition={{duration:1.2, delay:.1}}
         
       className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-        {console.log("the values of about ref: ", ref)}
-        {console.log("the values of about isinview: ", isinview)}
         <div className='border border-white/55 rounded-lg p-6'>
           <h3 className='text-2xl font-bold mb-2'>01. Background</h3>
           <p className='text-white/50 mb-6 text-justify'>

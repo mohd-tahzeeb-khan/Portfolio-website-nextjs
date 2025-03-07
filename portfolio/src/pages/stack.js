@@ -84,10 +84,6 @@ const stackItems=[
 
 ]
 const stack = ({slack}) => {
-    // slack.map((item,index)=>(
-    // console.log("item is:", item)
-    // ))
-   // console.log("Stacks are:" , slack)
     const controls=useAnimation();
     const [ref, inView] = useInView();
     useEffect(() => {

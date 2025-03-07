@@ -3,8 +3,6 @@ import React, { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 // Import the Iconsn from lucide-react
 import { ChevronDown, ExternalLink, Github } from 'lucide-react'
-
-import Image from 'next/image'
 const Projects=[
   {
     data:{
@@ -82,7 +80,6 @@ const portfolio = ({projects}) => {
                             
                             {
                               project.data.decription.map((desc, descIndex) => {
-                                console.log("This is descriiption",desc.text);
                                 <p>{desc.text}</p>
                               })
                             }

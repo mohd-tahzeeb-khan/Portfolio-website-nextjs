@@ -4,7 +4,6 @@ import portfolio_image from '../../public/images/portfolioimage.png';
 import Portfolio from "@/pages/portfolio";
 const Blog = ({blogs}) => {
   if(!blogs || (Array.isArray(blogs) && blogs.length === 0) ){
-    {console.log("blogs are: ",blogs)}
     return(
     <>
     </>

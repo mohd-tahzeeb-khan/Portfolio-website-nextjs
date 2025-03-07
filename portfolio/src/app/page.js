@@ -8,7 +8,6 @@ import { useEffect, useState } from "react";
 import Portfolio from "@/pages/portfolio";
 import Footer_banner from "@/components/footer_banner";
 export default function Nextjs() {
-  const [fetchdata, setfetchdata] = useState(null);
   const [contact, setContact] = useState(null);
   const [projects, setProjects] = useState(null);
   const [slack, setSlack] = useState(null)
@@ -29,14 +28,13 @@ export default function Nextjs() {
             setContact(getting_contact);
             setSlack(getting_slack);
             setBlogs(getting_blogs);
-            console.log("slacks are: ", getting_slack)
+           
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     }
     fetchingdata(); // Call the function inside useEffect
   }, []);
-  // console.log("outter stack is", slack)
   return (
     <>
       <Hero />

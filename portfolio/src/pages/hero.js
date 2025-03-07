@@ -4,8 +4,6 @@ import React from 'react';
 import { motion } from "framer-motion";
 import Image from 'next/image';
 import portfolio_image from '../../public/images/portfolioimage.png';
-import ScrollArrow from '@/components/scrollArrow';
-
 const scrollToSection = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
@@ -70,6 +68,7 @@ const hero = () => {
                     className="relative md:-mt-20 max-md:-mt-20 ">
                         <div className='absolute inset-0 bg-gradient-to-b from-[#000]/35 to-transparent rounded-full blur-3xl'></div>
                     <Image 
+                    alt='Portfolio Image'
                     src={portfolio_image}
                     height={500}
                     width={475}
