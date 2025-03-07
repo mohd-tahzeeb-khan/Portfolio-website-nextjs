@@ -1,0 +1,79 @@
+{
+  "format": "custom",
+  "id": "projects",
+  "label": "projects",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "UID"
+        }
+      },
+      "projectimage": {
+        "type": "Image",
+        "config": {
+          "label": "ProjectImage",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "TItle",
+          "placeholder": ""
+        }
+      },
+      "decription": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Decription",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl,paragraph"
+        }
+      },
+      "technology": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Technology",
+          "placeholder": "e.g java, python",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,o-list-item,rtl"
+        }
+      },
+      "type": {
+        "type": "Text",
+        "config": {
+          "label": "type",
+          "placeholder": ""
+        }
+      },
+      "github": {
+        "type": "Link",
+        "config": {
+          "label": "github",
+          "placeholder": "link for Repository",
+          "select": null,
+          "allowTargetBlank": true,
+          "allowText": true,
+          "repeat": false
+        }
+      },
+      "projectlink": {
+        "type": "Link",
+        "config": {
+          "label": "ProjectLink",
+          "placeholder": "Link to project",
+          "select": null,
+          "allowTargetBlank": true,
+          "allowText": true,
+          "repeat": false
+        }
+      }
+    }
+  }
+}

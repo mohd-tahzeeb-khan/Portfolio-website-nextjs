@@ -1,8 +1,8 @@
 'use client'
 import Image from 'next/image';
 import React, { useRef } from 'react';
-import portfolio_image from '../../public/images/portfolioimage.png';
-import Portfolio from "@/pages/portfolio";
+import Goals from "#/images/Goals.jpg";
+import Expertise from "#/images/Expertise.jpg"
 import { motion, useInView } from 'framer-motion';
 // import background from '#/images/Background.jpeg'
 const About = () => {
@@ -69,13 +69,13 @@ const About = () => {
         <div className='border border-white/55 rounded-lg p-6'>
           
           <div className='mt-4 relative border border-white/55 rounded-lg p-4 h-[220px] overflow-hidden clip-path-[polygon(90%_0%,_100%_50%,_50%_100%,_0%_50%)]'>
-            {/* <Image 
-              src={portfolio_image}
-              alt='Portfolio Image'
+            <Image 
+              src={Expertise}
+              alt='Expertise Image'
               height={300}
               width={300}
               className='absolute inset-0 w-full h-full object-cover'
-            /> */}
+            />
 
             {/* Iamge to be implement */}
           </div>
@@ -133,13 +133,13 @@ const About = () => {
       {/* ------------------------05. Goal------------------------ */}
       <div className='border border-white/55 rounded-lg p-6 flex flex-col justify-between'>
               <div className='relative border border-white/55 rounded-lg p-4 h-[200px] overflow-hidden'>
-                {/* <Image 
-                 src={""}
-                   alt='Project-2'
+               <Image 
+                 src={Goals}
+                   alt='Goals Image'
                    width={200}
                    height={160}
                    className='absolute inset-0 w-full h-full object-cover'
-                 />*/}
+                 />
               </div>
               <div>
                 <h3 className='text-2xl font-bold mb-2'>05. Goals</h3>

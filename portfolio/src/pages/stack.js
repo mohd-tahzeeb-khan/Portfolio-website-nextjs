@@ -1,10 +1,11 @@
 'use client'
-import { color, motion, useAnimate, useAnimation, useInView } from 'framer-motion'
+import { color, motion, useAnimate, useAnimation } from 'framer-motion'
 import { Icon } from 'lucide-react';
 import React, { useEffect, useRef } from 'react'
 // importing all the Icons
 import {FaLemon} from 'react-icons/fa';
 import {SiFigma,SiGit , SiSpringboot , SiSpringsecurity , SiSpring , SiStreamlit , SiTailwindcss , SiMysql , SiSqlite , SiPython , SiReact ,SiDjango ,SiFlutter } from "react-icons/si";
+import { useInView } from 'react-intersection-observer';
 
 
 const stackItems=[
@@ -82,41 +83,37 @@ const stackItems=[
     },
 
 ]
-
-const stack = ({slacks}) => {
+const stack = ({slack}) => {
+    // slack.map((item,index)=>(
+    // console.log("item is:", item)
+    // ))
+   // console.log("Stacks are:" , slack)
     const controls=useAnimation();
-    const ref = useRef(null);
-    const inView = useInView(ref, { threshold: 0.1 });
-
+    const [ref, inView] = useInView();
     useEffect(() => {
       if(inView){
         controls.start("visible");
       }else{
         controls.start("hidden");
-      }},[controls, inView]);
-      if(!slacks){
+        }},[controls, inView]);
+      if(!slack){
         return(
             <></>
         )
       }
       else{
   return (
-
     <>
-
-    {/* {console.log("slakc is",slacks[0].data.icon)} */}
     <section id="stack" className='py-24 md:py-64 w-full md:px-4 mx-auto text-center bg-[#424242]'>
         <h2 className='text-5xl md:text-6xl lg:text-7xl text-gray-100 font-bold mb-24'><span className='text-[#48CFCB]'>My</span> Stack</h2>
-        {/* <div><SiNodedotjs size={100}/></div> */}
         <div className='flex flex-1 lg:flex-shrink-0 flex-wrap justify-between gap-5 pt-10 p-4 w-full' ref={ref}>
             {stackItems.map((item, index)=>(
                 <motion.div
                     key={item.id}
-                    
                     custom={index}
                     initial="hidden"
-                    animate={{scale:1}}
-                    whileHover={{scale:8.1}}
+                    animate={controls}
+                    whileHover={{scale:1.1}}
                     variants={{
                         hidden:(index)=>({
                             opacity:1, y:index % 2===0? -100 :100,
@@ -129,16 +126,12 @@ const stack = ({slacks}) => {
                             },
                         },
                     }}
-                    
                   className= ' border border-white bg-white/10 flex flex-col items-center justify-center md:max-w-[190px] md:max-h-[200px] rounded-xl p-4 shadow-lg hover:shadow-2xl transition-shadow duration-200 sm:max-w-[90px]'
                 > 
-                    <div className={`mb-4 text-[#DDA0DD]`}>{item.icon}</div>
-                    <p className='text-white/20 text-xs'>{item.name}</p>
-                </motion.div> 
-
-                
-            ))}
-            
+                    <div className={`mb-4 text-[#48CFCB]`}>{item.icon}</div>
+                    <p className='text-[#48CFCB]/60 text-xs'>{item.name}</p>
+                </motion.div>    
+            ))} 
         </div>
     </section>    
     </>

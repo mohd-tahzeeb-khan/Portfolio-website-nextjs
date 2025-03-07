@@ -1,0 +1,9 @@
+@font-face {
+    font-family: mycustomfont;
+    src: url('/font/PlaywriteVN-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: logofont;
+    src: url('/font/PlaywriteVN-VariableFont_wght.ttf') format('truetype');
+}

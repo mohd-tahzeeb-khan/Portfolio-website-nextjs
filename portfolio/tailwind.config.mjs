@@ -7,6 +7,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily:{
+        logofont:['mycustomfont' ,'sans-serif'],
+        logofont2:['logofont', 'sans-serif']
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
