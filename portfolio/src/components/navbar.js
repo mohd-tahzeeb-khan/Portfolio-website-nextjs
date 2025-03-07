@@ -61,7 +61,7 @@ const Navbar = () => {
       <li key={index}>
         <a
           href={link.path}
-          onClick={closeNav}
+          onClick={() => scrollToSection(link.path)}
           className="text-5xl text-white"
         >
           {link.title}
