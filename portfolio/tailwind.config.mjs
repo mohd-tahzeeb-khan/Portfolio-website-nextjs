@@ -7,6 +7,11 @@ export default {
   ],
   theme: {
     extend: {
+      screens:{
+        'custom-375':"375px",
+        'custom-425':"425px"
+
+      },
       fontFamily:{
         logofont:['mycustomfont' ,'sans-serif'],
         logofont2:['logofont', 'sans-serif']

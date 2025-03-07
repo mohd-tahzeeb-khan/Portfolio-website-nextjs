@@ -72,7 +72,7 @@ const hero = () => {
                     src={portfolio_image}
                     height={500}
                     width={475}
-                    className='rounded-full mt-48 md:mt-3' />
+                    className='rounded-full mt-48 md:-mt-1 custom-375:mt-32 custom-425:mt-20' />
                 </motion.div>
             </div>
 {/* -------------------------------------------------------------------------------------- */}

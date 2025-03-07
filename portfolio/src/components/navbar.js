@@ -4,9 +4,14 @@ import React, { useState } from 'react';
 import { motion } from "framer-motion";
 
 
+const Navbar = () => {
+  const [nav, setNav] = useState(false);
+  const toggleNav = () => setNav(!nav);
+  const closeNav = () => setNav(false);
 
 const scrollToSection = (id) => {
   document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  closeNav();
 };
 const navLinks = [
   { title: "Home", path: "home" },
@@ -15,12 +20,6 @@ const navLinks = [
   { title: "Stack", path: "stack" },
   { title: "Contact", path: "contact" }
 ];
-
-const Navbar = () => {
-  const [nav, setNav] = useState(false);
-  const toggleNav = () => setNav(!nav);
-  const closeNav = () => setNav(false);
-
   return (
     <nav className="z-50 fixed w-full  md:-mt-4  text-white font-bold px-9 	border-white/10">
       {/* border-white/10 */}
@@ -60,7 +59,6 @@ const Navbar = () => {
     {navLinks.map((link, index) => (
       <li key={index}>
         <a
-          href={link.path}
           onClick={() => scrollToSection(link.path)}
           className="text-5xl text-white"
         >
