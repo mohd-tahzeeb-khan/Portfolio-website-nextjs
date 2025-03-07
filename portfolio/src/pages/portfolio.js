@@ -67,7 +67,7 @@ const portfolio = ({projects}) => {
                         animate={{height:'auto', opacity:1}}
                         exit={{height:0, opacity:0}}
                         transition={{duration:0.3}}
-                        className='px-6 pb-6 bg-[#424242] border border-white/10 absolute  w-full lg:w-[48%]'>
+                        className='px-6 pb-6 -mt-1 bg-[#424242] border border-white/10 absolute  w-full lg:w-[48%] md:w-[97%] custom-375:w-[94%]'>
                           <div className='flex flex-col md:flex-row gap-8'>
                             {/* <Image 
                               // src={"project.data.projectimage.url"}
