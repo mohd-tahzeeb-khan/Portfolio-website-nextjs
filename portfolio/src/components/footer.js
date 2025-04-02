@@ -54,12 +54,12 @@ const footer = () => {
       </Link>
     </motion.div>
     
-    <motion.div 
-    whileHover={{scale:1.1}}>
-       <Link target='_blank'
-      href={"www.github.com"}
-      ><SiYoutube className='text-white text-xl md:text-4xl'/></Link>
-    </motion.div>
+    {/* <motion.div  */}
+    {/* whileHover={{scale:1.1}}> */}
+       {/* <Link target='_blank' */}
+       {/* href={"www.github.com"} */}
+       {/* ><SiYoutube className='text-white text-xl md:text-4xl'/></Link> */}
+    {/* </motion.div> */}
     
     <motion.div 
     whileHover={{scale:1.1}}>
@@ -78,8 +78,7 @@ const footer = () => {
 
     <motion.div 
     whileHover={{scale:1.1}}>
-      <Link target='_blank'
-        href={"www.github.com"}>
+      <Link target='_blank' href="mailto:tahzeebk80@gmail.com" passHref>
         <SiGmail className='text-white text-xl md:text-4xl'/>
       </Link>
     </motion.div>
