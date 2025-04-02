@@ -49,7 +49,7 @@ const footer = () => {
     <motion.div 
     whileHover={{scale:1.1}}>
       <Link target='_blank'
-        href={"www.github.com"}>
+        href={"https://www.instagram.com/md.tahzeeb.k/"}>
         <SiInstagram className='text-white text-xl md:text-4xl'/>
       </Link>
     </motion.div>
