@@ -48,7 +48,7 @@ const footer = () => {
     </motion.div>
     <motion.div 
     whileHover={{scale:1.1}}>
-      <Link
+      <Link target='_blank'
         href={"www.github.com"}>
         <SiInstagram className='text-white text-xl md:text-4xl'/>
       </Link>
@@ -56,21 +56,21 @@ const footer = () => {
     
     <motion.div 
     whileHover={{scale:1.1}}>
-       <Link
+       <Link target='_blank'
       href={"www.github.com"}
       ><SiYoutube className='text-white text-xl md:text-4xl'/></Link>
     </motion.div>
     
     <motion.div 
     whileHover={{scale:1.1}}>
-      <Link
+      <Link target='_blank'
       href={"https://peerlist.io/mdtahzeebk"}
       ><SiPeerlist className='text-white text-xl md:text-4xl'/></Link>
     </motion.div>
       
     <motion.div 
     whileHover={{scale:1.1}}>
-      <Link
+      <Link target='_blank'
         href={"https://dumb.dev.to/mohdtahzeebkhan"}>
         <SiDevdotto className='text-white text-xl md:text-4xl'/>
       </Link>
@@ -78,7 +78,7 @@ const footer = () => {
 
     <motion.div 
     whileHover={{scale:1.1}}>
-      <Link
+      <Link target='_blank'
         href={"www.github.com"}>
         <SiGmail className='text-white text-xl md:text-4xl'/>
       </Link>
