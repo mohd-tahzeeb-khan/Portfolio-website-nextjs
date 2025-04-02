@@ -9,7 +9,7 @@ const scrollToSection = (id) => {
   };
 const hero = () => {
     const resume=()=>{
-        window.open(`/Tahzeeb Resume (2).pdf`, "_blank", "noopener,noreferrer")
+        window.open(`/TResume.pdf`, "_blank", "noopener,noreferrer")
         // window.open(, "_blank")
     }
   return (
