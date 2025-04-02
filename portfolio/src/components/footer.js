@@ -4,9 +4,27 @@ import { Scale } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
+import { createClient } from "@/prismicio";
+import { useEffect, useState } from "react";
 
 import { SiLinkedin, SiInstagram, SiGithub, SiGmail, SiDevdotto, SiPeerlist, SiYoutube } from 'react-icons/si';
 const footer = () => {
+  const [contact, setContact] = useState([])
+  useEffect(() => {
+    async function fetchingdata() {
+      try {
+        const client = createClient();
+        const getting_contact=await client.getAllByType("contact");  
+        setContact([getting_contact[0].data.github_link.url,getting_contact[0].data.github_link.url]);
+           
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    }
+    fetchingdata(); // Call the function inside useEffect
+  }, []);
+  const contacts=contact;
+  console.log(contact)
   return (
      <>
      {/* Footer */}
@@ -24,7 +42,7 @@ const footer = () => {
     </motion.div>
     <motion.div
     whileHover={{scale:1.1}}>
-      <Link href={"www.github.com"} target='_blank'>
+      <Link href={""} target='_blank'>
         <SiGithub className='text-white text-xl md:text-4xl'/>
       </Link>
     </motion.div>
@@ -53,7 +71,7 @@ const footer = () => {
     <motion.div 
     whileHover={{scale:1.1}}>
       <Link
-        href={"www.github.com"}>
+        href={"https://dumb.dev.to/mohdtahzeebkhan"}>
         <SiDevdotto className='text-white text-xl md:text-4xl'/>
       </Link>
     </motion.div>
