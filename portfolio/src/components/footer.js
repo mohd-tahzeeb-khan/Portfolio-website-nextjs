@@ -35,7 +35,7 @@ const footer = () => {
     <motion.div
     whileHover={{scale:1.1}}>
       <Link
-        href={"www.github.com"}>
+        href={"https://www.linkedin.com/in/md-tahzeeb-k/"}>
 
         <SiLinkedin className='text-xl md:text-4xl'/>
       </Link>
@@ -64,7 +64,7 @@ const footer = () => {
     <motion.div 
     whileHover={{scale:1.1}}>
       <Link
-      href={"www.github.com"}
+      href={"https://peerlist.io/mdtahzeebk"}
       ><SiPeerlist className='text-white text-xl md:text-4xl'/></Link>
     </motion.div>
       
